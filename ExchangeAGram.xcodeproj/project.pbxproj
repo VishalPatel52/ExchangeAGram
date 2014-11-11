@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C93CDAD61A124C1600B628E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93CDAD51A124C1600B628E3 /* MapViewController.swift */; };
+		C93CDAD81A124D7E00B628E3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93CDAD71A124D7E00B628E3 /* MapKit.framework */; };
+		C93CDADA1A12540800B628E3 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93CDAD91A12540800B628E3 /* FeedItem.swift */; };
+		C9BC7F651A082E340011072B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BC7F641A082E340011072B /* ProfileViewController.swift */; };
+		C9BC7F671A0837BB0011072B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9BC7F661A0837BB0011072B /* FacebookSDK.framework */; };
 		C9C976B51A012AAE00F308B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C976B41A012AAE00F308B8 /* AppDelegate.swift */; };
 		C9C976B81A012AAF00F308B8 /* ExchangeAGram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9C976B61A012AAF00F308B8 /* ExchangeAGram.xcdatamodeld */; };
 		C9C976BD1A012AAF00F308B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C976BB1A012AAF00F308B8 /* Main.storyboard */; };
@@ -16,7 +21,6 @@
 		C9C976D81A012C6600F308B8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C976D71A012C6600F308B8 /* FeedViewController.swift */; };
 		C9C976DA1A012E1400F308B8 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C976D91A012E1400F308B8 /* FeedCell.swift */; };
 		C9C976DC1A01302B00F308B8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C976DB1A01302B00F308B8 /* MobileCoreServices.framework */; };
-		C9C976DE1A01372B00F308B8 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C976DD1A01372B00F308B8 /* FeedItem.swift */; };
 		C9C976E01A01404C00F308B8 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C976DF1A01404C00F308B8 /* FilterViewController.swift */; };
 		C9C976E21A014F7200F308B8 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C976E11A014F7200F308B8 /* FilterCell.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C93CDAD51A124C1600B628E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C93CDAD71A124D7E00B628E3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C93CDAD91A12540800B628E3 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItem.swift; path = ../FeedItem.swift; sourceTree = "<group>"; };
+		C9BC7F641A082E340011072B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C9BC7F661A0837BB0011072B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		C9BC7F681A083AFB0011072B /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "../Bridging-Header.h"; sourceTree = "<group>"; };
 		C9C976AF1A012AAE00F308B8 /* ExchangeAGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeAGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C976B31A012AAE00F308B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9C976B41A012AAE00F308B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +55,6 @@
 		C9C976D71A012C6600F308B8 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		C9C976D91A012E1400F308B8 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C9C976DB1A01302B00F308B8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		C9C976DD1A01372B00F308B8 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		C9C976DF1A01404C00F308B8 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		C9C976E11A014F7200F308B8 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,7 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93CDAD81A124D7E00B628E3 /* MapKit.framework in Frameworks */,
 				C9C976DC1A01302B00F308B8 /* MobileCoreServices.framework in Frameworks */,
+				C9BC7F671A0837BB0011072B /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,10 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9BC7F631A03C6BB0011072B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C93CDAD91A12540800B628E3 /* FeedItem.swift */,
+				C9C976B61A012AAF00F308B8 /* ExchangeAGram.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C9C976A61A012AAE00F308B8 = {
 			isa = PBXGroup;
 			children = (
-				C9C976DB1A01302B00F308B8 /* MobileCoreServices.framework */,
 				C9C976B11A012AAE00F308B8 /* ExchangeAGram */,
 				C9C976CA1A012AAF00F308B8 /* ExchangeAGramTests */,
 				C9C976B01A012AAE00F308B8 /* Products */,
@@ -91,16 +110,18 @@
 		C9C976B11A012AAE00F308B8 /* ExchangeAGram */ = {
 			isa = PBXGroup;
 			children = (
+				C9BC7F681A083AFB0011072B /* Bridging-Header.h */,
 				C9C976B41A012AAE00F308B8 /* AppDelegate.swift */,
 				C9C976D71A012C6600F308B8 /* FeedViewController.swift */,
 				C9C976DF1A01404C00F308B8 /* FilterViewController.swift */,
+				C9BC7F641A082E340011072B /* ProfileViewController.swift */,
+				C93CDAD51A124C1600B628E3 /* MapViewController.swift */,
 				C9C976D91A012E1400F308B8 /* FeedCell.swift */,
 				C9C976E11A014F7200F308B8 /* FilterCell.swift */,
 				C9C976BB1A012AAF00F308B8 /* Main.storyboard */,
 				C9C976BE1A012AAF00F308B8 /* Images.xcassets */,
 				C9C976C01A012AAF00F308B8 /* LaunchScreen.xib */,
-				C9C976B61A012AAF00F308B8 /* ExchangeAGram.xcdatamodeld */,
-				C9C976DD1A01372B00F308B8 /* FeedItem.swift */,
+				C9BC7F631A03C6BB0011072B /* Model */,
 				C9C976B21A012AAE00F308B8 /* Supporting Files */,
 			);
 			path = ExchangeAGram;
@@ -109,6 +130,9 @@
 		C9C976B21A012AAE00F308B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C93CDAD71A124D7E00B628E3 /* MapKit.framework */,
+				C9BC7F661A0837BB0011072B /* FacebookSDK.framework */,
+				C9C976DB1A01302B00F308B8 /* MobileCoreServices.framework */,
 				C9C976B31A012AAE00F308B8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -180,6 +204,7 @@
 				TargetAttributes = {
 					C9C976AE1A012AAE00F308B8 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = B5B8XBX9AB;
 					};
 					C9C976C61A012AAF00F308B8 = {
 						CreatedOnToolsVersion = 6.1;
@@ -235,8 +260,10 @@
 				C9C976E01A01404C00F308B8 /* FilterViewController.swift in Sources */,
 				C9C976B51A012AAE00F308B8 /* AppDelegate.swift in Sources */,
 				C9C976DA1A012E1400F308B8 /* FeedCell.swift in Sources */,
+				C93CDAD61A124C1600B628E3 /* MapViewController.swift in Sources */,
+				C93CDADA1A12540800B628E3 /* FeedItem.swift in Sources */,
 				C9C976D81A012C6600F308B8 /* FeedViewController.swift in Sources */,
-				C9C976DE1A01372B00F308B8 /* FeedItem.swift in Sources */,
+				C9BC7F651A082E340011072B /* ProfileViewController.swift in Sources */,
 				C9C976B81A012AAF00F308B8 /* ExchangeAGram.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,9 +389,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Vishal/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -372,9 +406,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Vishal/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = ExchangeAGram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -431,6 +472,7 @@
 				C9C976D31A012AAF00F308B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9C976D41A012AAF00F308B8 /* Build configuration list for PBXNativeTarget "ExchangeAGramTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +481,7 @@
 				C9C976D61A012AAF00F308B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

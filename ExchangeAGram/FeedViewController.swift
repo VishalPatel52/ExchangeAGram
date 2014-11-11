@@ -9,30 +9,52 @@
 import UIKit
 import MobileCoreServices
 import CoreData
+import MapKit
 
-class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class FeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     //manually request fetchResultsController and CoreData
     var feedArray:[AnyObject] = []
     
+    //Location manager property
+    var locationManager :CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 100.0
+        locationManager.startUpdatingLocation()
+
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        
         let request = NSFetchRequest(entityName: "FeedItem")
         let appDelegate = ((UIApplication.sharedApplication().delegate as AppDelegate))
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         feedArray = context.executeFetchRequest(request, error: nil)!
+        self.collectionView.reloadData()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func profileButtonPressed(sender: UIBarButtonItem) {
+        
+        self.performSegueWithIdentifier("profileSegue", sender: nil)
+    }
+    
     //cameraController, UIImagePickerController to access the media files (image, video) from our device
     @IBAction func snapBarButtonItemPressed(sender: UIBarButtonItem) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
@@ -73,6 +95,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         //convert image instance in to JPEG image instance to store
         let imageData = UIImageJPEGRepresentation(image, 1.0)
+        let thumbNailData = UIImageJPEGRepresentation(image, 0.1)
         
         //save image in CoreData
         let managedObjectContext = ((UIApplication.sharedApplication().delegate) as AppDelegate).managedObjectContext
@@ -80,6 +103,12 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         let feedItem = FeedItem(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext!)
         feedItem.image = imageData
         feedItem.caption = "Test Caption!"
+        feedItem.thumbNail = thumbNailData
+        
+        //Store logitude and latitude in CoreData
+        feedItem.latitude = locationManager.location.coordinate.latitude
+        feedItem.longitude = locationManager.location.coordinate.longitude
+        
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
         
         feedArray.append(feedItem)
@@ -122,6 +151,14 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.captionLabel.text = thisItem.caption
         return cell
         
+    }
+    
+    //CLLocationManager Delegate
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        
+        println("Locations : \(locations)")
+        println("Location will be determined")
+
     }
     
     
