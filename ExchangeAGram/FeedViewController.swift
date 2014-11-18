@@ -109,6 +109,13 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         feedItem.latitude = locationManager.location.coordinate.latitude
         feedItem.longitude = locationManager.location.coordinate.longitude
         
+        
+        //Add uuid and store to DataModel
+        let UUID = NSUUID().UUIDString
+        feedItem.uniqueID = UUID
+        
+        feedItem.filtered = false
+        
         (UIApplication.sharedApplication().delegate as AppDelegate).saveContext()
         
         feedArray.append(feedItem)
@@ -147,7 +154,15 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         var cell:FeedCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as FeedCell
         let thisItem = feedArray[indexPath.row] as FeedItem
-        cell.imageView.image = UIImage(data: thisItem.image) //cause FeedItem image is a form of NSdata, binary image
+        if thisItem.filtered == true {
+            
+            let returnedImage =  UIImage(data: thisItem.image)!
+            let image = UIImage(CGImage: returnedImage.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)!
+        }
+        else {
+            cell.imageView.image = UIImage(data: thisItem.image) //cause FeedItem image is a form of NSdata, binary image
+        }
+        
         cell.captionLabel.text = thisItem.caption
         return cell
         
