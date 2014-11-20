@@ -253,6 +253,8 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
         if NSFileManager.defaultManager().fileExistsAtPath(uniquePath){
             
             var returnedImage = UIImage(contentsOfFile: uniquePath)!
+            
+            //rotate image to right as the filterd images are left roteted on the real device
             image = UIImage(CGImage: returnedImage.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)!
             
         }
@@ -260,6 +262,8 @@ class FilterViewController: UIViewController, UICollectionViewDataSource, UIColl
             
             self.cacheImage(imageNumber)
             var returnedImage = UIImage(contentsOfFile: uniquePath)!
+            
+            //rotate image to right as the filterd images are left roteted on the real device
             image = UIImage(CGImage: returnedImage.CGImage, scale: 1.0, orientation: UIImageOrientation.Right)!
 
         }

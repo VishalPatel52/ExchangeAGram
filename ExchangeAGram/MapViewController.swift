@@ -26,12 +26,11 @@ class MapViewController: UIViewController {
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
         var error:NSError?
         let itemArray = context.executeFetchRequest(request, error: &error)
-        println("\(error)")
         println("Map view is loaded")
-        
+        println("\(itemArray!.count)")
         if itemArray!.count > 0 {
             for item in itemArray! {
-                let location = CLLocationCoordinate2D(latitude: Double(item.latitude!), longitude: Double(item.longitude!))
+                let location = CLLocationCoordinate2D(latitude: Double(item.latitude), longitude: Double(item.longitude))
                 let span = MKCoordinateSpanMake(0.05, 0.05)
                 let region = MKCoordinateRegionMake(location, span)
                 mapView.setRegion(region, animated: true)

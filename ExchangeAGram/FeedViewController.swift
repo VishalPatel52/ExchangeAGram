@@ -154,6 +154,7 @@ class FeedViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         var cell:FeedCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as FeedCell
         let thisItem = feedArray[indexPath.row] as FeedItem
+        
         if thisItem.filtered == true {
             
             let returnedImage =  UIImage(data: thisItem.image)!
